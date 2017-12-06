@@ -1,0 +1,86 @@
+{
+  "name": "House",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "FunHouse"
+    },
+    "address": {
+      "type": "string",
+      "default": "Liên Chiểu, Đà Nẵng"
+    },
+    "phone": {
+      "type": "string",
+      "default": "(+84)1206145483"
+    },
+    "social_link": {
+      "type": "string",
+      "default": "https://fb.com/anhtuanhnh"
+    },
+    "description": {
+      "type": "string",
+      "default": "Nhà mới xây, rộng rãi thoáng mát, phù hợp cho người mới ra trường đi làm."
+    },
+    "owner_id": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "default": "Nhà cho thuê"
+    },
+    "price": {
+      "type": "number",
+      "default": 100000
+    },
+    "bed": {
+      "type": "number",
+      "default": 1
+    },
+    "image": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number",
+      "default": 4
+    },
+    "views": {
+      "type": "number",
+      "default": 100
+    },
+    "reviews": {
+      "type": "number",
+      "default": 10
+    },
+    "last_edit": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number",
+      "default": 16.059237
+    },
+    "longitude": {
+      "type": "number",
+      "default": 108.22332
+    },
+    "happy_time": {
+      "type": "string",
+      "default": "6:00 - 22:00"
+    },
+    "owner_name": {
+      "type": "string",
+      "default": "Tuan Hoang"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
