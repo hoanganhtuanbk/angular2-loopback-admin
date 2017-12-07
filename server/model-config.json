@@ -39,5 +39,9 @@
   "booking": {
     "dataSource": "db",
     "public": true
+  },
+  "rent": {
+    "dataSource": "db",
+    "public": true
   }
 }

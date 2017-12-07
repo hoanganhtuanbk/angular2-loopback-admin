@@ -52,6 +52,7 @@ import { RealTime } from './services/core/real.time';
 import { UserApi } from './services/custom/User';
 import { HouseApi } from './services/custom/House';
 import { BookingApi } from './services/custom/Booking';
+import { RentApi } from './services/custom/Rent';
 /**
 * @module SDKBrowserModule
 * @description
@@ -86,6 +87,7 @@ export class SDKBrowserModule {
         UserApi,
         HouseApi,
         BookingApi,
+        RentApi,
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser },
         { provide: SocketDriver, useClass: SocketBrowser }

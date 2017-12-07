@@ -2,12 +2,12 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Dashboard
-      <small>Control panel</small>
+     House
+      <small>Manager your houses here!</small>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active">Dashboard</li>
+      <li><a href="#"><i class="fa fa-dashboard"></i> home</a></li>
+      <li class="active">add</li>
     </ol>
   </section>
 
@@ -15,38 +15,81 @@
   <section class="content">
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">Quick Example</h3>
+        <button class="btn btn-default btn-xs" (click)="goBack()" ><i class="fa fa-arrow-left"></i></button><p class="box-title">Add a new house</p>
       </div>
       <!-- /.box-header -->
-      <!-- form start -->
-      <form role="form">
-        <div class="box-body">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile">
+  <!-- form start -->
+      <div class="body">
+        <div class="row">
 
-            <p class="help-block">Example block-level help text here.</p>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Check me out
-            </label>
-          </div>
-        </div>
-        <!-- /.box-body -->
+            <form role="form" [formGroup]="rForm" (ngSubmit)="addHouse(rForm.value)">
+              <div class="col-md-6">
+              <div class="box-body">
+                <div class="" [class]="(!rForm.controls['name'].valid && rForm.controls['name'].touched) ? 'has-error form-group':'form-group'" >
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter name">
+                  <span class="help-block" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">{{ titleAlert }}</span>
 
-        <div class="box-footer">
-          <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="form-group"  [class]="(!rForm.controls['address'].valid && rForm.controls['address'].touched) ? 'form-group has-error':'form-group'" >
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control" id="address" formControlName="address" placeholder="Address">
+                  <span class="help-block" *ngIf="!rForm.controls['address'].valid && rForm.controls['address'].touched">{{ titleAlert }}</span>
+
+                </div>
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <input type="text" class="form-control" id="description" formControlName="description" placeholder="description" >
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputFile">Image</label>
+                  <input type="file" id="exampleInputFile">
+
+                  <p class="help-block">Example block-level help text here.</p>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Check me out
+                  </label>
+                </div>
+              </div>
+              <!-- /.box-body -->
+              </div>
+                <div class="col-md-6">
+                  <div class="box-body">
+                    <div class="form-group" [class]="(!rForm.controls['price'].valid && rForm.controls['price'].touched) ? 'form-group has-error':'form-group'" >
+                      <label for="price">Price</label>
+                      <input type="text" class="form-control" id="price" formControlName="price" placeholder="Enter price">
+                      <span class="help-block" *ngIf="!rForm.controls['price'].valid && rForm.controls['price'].touched">{{ titleAlert }}</span>
+
+                    </div>
+                    <div class="form-group"  [class]="(!rForm.controls['category'].valid && rForm.controls['category'].touched) ? 'form-group has-error':'form-group'" >
+                      <label>Category</label>
+                      <select class="form-control" formControlName="category">
+                        <option value="Nhà nguyên căn">Nhà nguyên căn</option>
+                        <option value="Chung cư">Chung cư</option>
+                        <option value="Căn hộ">Căn hộ</option>
+                        <option value="Phòng trọ">Phòng trọ</option>
+                      </select>
+                      <span class="help-block" *ngIf="!rForm.controls['category'].valid && rForm.controls['category'].touched">{{ titleAlert }}</span>
+
+                    </div>
+                    <div class="form-group">
+                      <label for="bed">Bed</label>
+                      <input type="text" class="form-control" id="bed" formControlName="bed" placeholder="Bed" [maxlength]="10">
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-12">
+                <div class="box-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </form>
+
         </div>
-      </form>
+      </div>
     </div>
   </section>
 </div>

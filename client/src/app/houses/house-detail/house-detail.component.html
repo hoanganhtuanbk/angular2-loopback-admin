@@ -1,3 +1,35 @@
-<p>
-  house-detail works!
-</p>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      House
+      <small>Manager your houses here!</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> home</a></li>
+      <li class="active">add</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <button class="btn btn-default btn-xs" (click)="goBack()" ><i class="fa fa-arrow-left"></i></button>
+      <div>
+        <p class="box-title">Add a new house</p>
+      </div>
+      </div>
+      <!-- /.box-header -->
+      <!-- form start -->
+      <div class="body">
+        <div class="panel">
+          <div class="panel-body">
+            <pre>{{house | json}}</pre>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

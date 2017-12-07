@@ -1,0 +1,29 @@
+{
+  "name": "rent",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "houseId": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

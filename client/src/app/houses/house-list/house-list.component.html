@@ -2,13 +2,13 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Data Tables
-      <small>advanced tables</small>
+      House
+      <small>Manager your houses here!</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#">Tables</a></li>
-      <li class="active">Data tables</li>
+      <li><a href="#" class="active">List</a></li>
+
     </ol>
   </section>
 
@@ -19,6 +19,7 @@
         <div class="box">
           <div class="box-header">
             <h3 class="box-title">Hover Data Table</h3>
+            <button class="btn btn-default pull-right"routerLink="/houses/add">Add</button>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -48,7 +49,9 @@
                 <td>{{item.happy_time}}</td>
                 <td>{{item.owner_name}}</td>
                 <td>
-                  <button class="btn btn-success btn-sm">Edit</button>
+                  <button [routerLink]="['/houses/detail', item.id]" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></button>
+                  <button [routerLink]="['/houses/edit', item.id]" class="btn btn-success btn-xs"><i class="fa fa-pencil"></i></button>
+
                 </td>
               </tr>
               </tbody>

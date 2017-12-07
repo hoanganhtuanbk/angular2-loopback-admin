@@ -2,8 +2,9 @@ import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SDKBrowserModule } from './shared/sdk/index';
-
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { StarterComponent } from './starter/starter.component';
 import { StarterHeaderComponent } from './starter/starter-header/starter-header.component';
@@ -22,6 +23,7 @@ import { HouseListComponent } from './houses/house-list/house-list.component';
 import { HousesComponent } from './houses/houses.component';
 import { HouseAddComponent } from './houses/house-add/house-add.component';
 import { HouseDetailComponent } from './houses/house-detail/house-detail.component';
+import { HouseEditComponent } from './houses/house-edit/house-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +38,15 @@ import { HouseDetailComponent } from './houses/house-detail/house-detail.compone
     HousesComponent,
     HouseAddComponent,
     HouseDetailComponent,
+    HouseEditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AdminModule,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
     SDKBrowserModule.forRoot()
   ],
   providers: [],

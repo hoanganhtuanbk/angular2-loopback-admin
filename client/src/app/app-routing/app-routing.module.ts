@@ -4,7 +4,7 @@ import { HousesComponent } from '../houses/houses.component';
 import { HouseListComponent } from '../houses/house-list/house-list.component';
 import { HouseAddComponent } from '../houses/house-add/house-add.component';
 import { HouseDetailComponent } from '../houses/house-detail/house-detail.component';
-
+import { HouseEditComponent } from '../houses/house-edit/house-edit.component'
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -40,9 +40,13 @@ import { RouterModule } from '@angular/router';
               path: 'add',
               component: HouseAddComponent
             },{
-              path: 'detail',
+              path: 'detail/:id',
               component: HouseDetailComponent
             },
+            {
+              path: 'edit/:id',
+              component: HouseEditComponent
+            }
           ]},
       ]},
 
