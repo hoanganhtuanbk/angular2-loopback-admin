@@ -1,48 +1,50 @@
 /* tslint:disable */
 
 declare var Object: any;
-export interface UserInterface {
+export interface AccountInterface {
   "realm"?: string;
   "username"?: string;
+  "email"?: string;
   "challenges"?: any;
-  "email": string;
   "emailVerified"?: boolean;
   "status"?: string;
   "created"?: Date;
   "lastUpdated"?: Date;
   "id"?: number;
   "password"?: string;
+  accessTokens?: any[];
 }
 
-export class User implements UserInterface {
+export class Account implements AccountInterface {
   "realm": string;
   "username": string;
-  "challenges": any;
   "email": string;
+  "challenges": any;
   "emailVerified": boolean;
   "status": string;
   "created": Date;
   "lastUpdated": Date;
   "id": number;
   "password": string;
-  constructor(data?: UserInterface) {
+  accessTokens: any[];
+  constructor(data?: AccountInterface) {
     Object.assign(this, data);
   }
   /**
    * The name of the model represented by this $resource,
-   * i.e. `User`.
+   * i.e. `Account`.
    */
   public static getModelName() {
-    return "User";
+    return "Account";
   }
   /**
   * @method factory
   * @author Jonathan Casarrubias
   * @license MIT
-  * This method creates an instance of User for dynamic purposes.
+  * This method creates an instance of Account for dynamic purposes.
   **/
-  public static factory(data: UserInterface): User{
-    return new User(data);
+  public static factory(data: AccountInterface): Account{
+    return new Account(data);
   }
   /**
   * @method getModelDefinition
@@ -53,9 +55,9 @@ export class User implements UserInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'User',
-      plural: 'Users',
-      path: 'Users',
+      name: 'Account',
+      plural: 'Accounts',
+      path: 'Accounts',
       idName: 'id',
       properties: {
         "realm": {
@@ -66,6 +68,10 @@ export class User implements UserInterface {
           name: 'username',
           type: 'string'
         },
+        "email": {
+          name: 'email',
+          type: 'string'
+        },
         "credentials": {
           name: 'credentials',
           type: 'any'
@@ -73,10 +79,6 @@ export class User implements UserInterface {
         "challenges": {
           name: 'challenges',
           type: 'any'
-        },
-        "email": {
-          name: 'email',
-          type: 'string'
         },
         "emailVerified": {
           name: 'emailVerified',
@@ -104,6 +106,14 @@ export class User implements UserInterface {
         },
       },
       relations: {
+        accessTokens: {
+          name: 'accessTokens',
+          type: 'any[]',
+          model: '',
+          relationType: 'hasMany',
+                  keyFrom: 'id',
+          keyTo: 'userId'
+        },
       }
     }
   }

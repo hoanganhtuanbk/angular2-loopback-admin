@@ -49,10 +49,10 @@ import { SocketBrowser } from './sockets/socket.browser';
 import { SocketDriver } from './sockets/socket.driver';
 import { SocketConnection } from './sockets/socket.connections';
 import { RealTime } from './services/core/real.time';
-import { UserApi } from './services/custom/User';
 import { HouseApi } from './services/custom/House';
 import { BookingApi } from './services/custom/Booking';
 import { RentApi } from './services/custom/Rent';
+import { AccountApi } from './services/custom/Account';
 /**
 * @module SDKBrowserModule
 * @description
@@ -84,10 +84,10 @@ export class SDKBrowserModule {
         JSONSearchParams,
         SDKModels,
         RealTime,
-        UserApi,
         HouseApi,
         BookingApi,
         RentApi,
+        AccountApi,
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser },
         { provide: SocketDriver, useClass: SocketBrowser }
