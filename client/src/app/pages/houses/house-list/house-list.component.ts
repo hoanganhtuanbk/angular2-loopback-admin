@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { House, AccessToken }  from '../../shared/sdk/models';
-import { HouseApi }            from '../../shared/sdk/services';
+import { House, AccessToken }  from '../../../shared/sdk/models';
+import { HouseApi }            from '../../../shared/sdk/services';
 @Component({
   selector: 'app-house-list',
   templateUrl: './house-list.component.html',

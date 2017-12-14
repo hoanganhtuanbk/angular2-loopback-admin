@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {Location} from '@angular/common';
-import { House, AccessToken }  from '../../shared/sdk/models';
-import { HouseApi }            from '../../shared/sdk/services';
+import { House, AccessToken }  from '../../../shared/sdk/models';
+import { HouseApi }            from '../../../shared/sdk/services';
 import {FormGroup} from "@angular/forms";
 @Component({
   selector: 'app-house-detail',

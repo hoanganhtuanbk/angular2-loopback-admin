@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SDKBrowserModule } from './shared/sdk/index';
 import { CommonModule } from '@angular/common';
+
+
 import { AppComponent } from './app.component';
-import { StarterComponent } from './starter/starter.component';
-import { StarterHeaderComponent } from './starter/starter-header/starter-header.component';
-import { StarterLeftSideComponent } from './starter/starter-left-side/starter-left-side.component';
-import { StarterContentComponent } from './starter/starter-content/starter-content.component';
-import { StarterFooterComponent } from './starter/starter-footer/starter-footer.component';
-import { StarterControlSidebarComponent } from './starter/starter-control-sidebar/starter-control-sidebar.component';
+import { StarterComponent } from './pages/starter/starter.component';
+import { StarterHeaderComponent } from './pages/starter/starter-header/starter-header.component';
+import { StarterLeftSideComponent } from './pages/starter/starter-left-side/starter-left-side.component';
+import { StarterContentComponent } from './pages/starter/starter-content/starter-content.component';
+import { StarterFooterComponent } from './pages/starter/starter-footer/starter-footer.component';
+import { StarterControlSidebarComponent } from './pages/starter/starter-control-sidebar/starter-control-sidebar.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 import { AdminLeftSideComponent } from './admin/admin-left-side/admin-left-side.component';
@@ -19,11 +21,12 @@ import { AdminContentComponent } from './admin/admin-content/admin-content.compo
 import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
 import { AdminControlSidebarComponent } from './admin/admin-control-sidebar/admin-control-sidebar.component';
 import { AdminDashboard1Component } from './admin/admin-dashboard1/admin-dashboard1.component';
-import { HouseListComponent } from './houses/house-list/house-list.component';
-import { HousesComponent } from './houses/houses.component';
-import { HouseAddComponent } from './houses/house-add/house-add.component';
-import { HouseDetailComponent } from './houses/house-detail/house-detail.component';
-import { HouseEditComponent } from './houses/house-edit/house-edit.component';
+import { HouseListComponent } from './pages/houses/house-list/house-list.component';
+import { HousesComponent } from './pages/houses/houses.component';
+import { HouseAddComponent } from './pages/houses/house-add/house-add.component';
+import { HouseDetailComponent } from './pages/houses/house-detail/house-detail.component';
+import { HouseEditComponent } from './pages/houses/house-edit/house-edit.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,7 @@ import { HouseEditComponent } from './houses/house-edit/house-edit.component';
     HouseAddComponent,
     HouseDetailComponent,
     HouseEditComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ import { HouseEditComponent } from './houses/house-edit/house-edit.component';
     ReactiveFormsModule,
     SDKBrowserModule.forRoot()
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

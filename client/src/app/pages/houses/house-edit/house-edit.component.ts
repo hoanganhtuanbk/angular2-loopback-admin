@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Location} from '@angular/common';
-import { House, AccessToken }  from '../../shared/sdk/models';
-import { HouseApi }            from '../../shared/sdk/services';
+import { House, AccessToken }  from '../../../shared/sdk/models';
+import { HouseApi }            from '../../../shared/sdk/services';
 import {ActivatedRoute,Router} from "@angular/router";
 @Component({
   selector: 'app-house-edit',

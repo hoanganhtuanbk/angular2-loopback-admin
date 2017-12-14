@@ -1,10 +1,11 @@
-import { StarterComponent } from '../starter/starter.component';
-import { StarterContentComponent } from '../starter/starter-content/starter-content.component';
-import { HousesComponent } from '../houses/houses.component';
-import { HouseListComponent } from '../houses/house-list/house-list.component';
-import { HouseAddComponent } from '../houses/house-add/house-add.component';
-import { HouseDetailComponent } from '../houses/house-detail/house-detail.component';
-import { HouseEditComponent } from '../houses/house-edit/house-edit.component'
+import { StarterComponent } from '../pages/starter/starter.component';
+import { StarterContentComponent } from '../pages/starter/starter-content/starter-content.component';
+import { HousesComponent } from '../pages/houses/houses.component';
+import { HouseListComponent } from '../pages/houses/house-list/house-list.component';
+import { HouseAddComponent } from '../pages/houses/house-add/house-add.component';
+import { HouseDetailComponent } from '../pages/houses/house-detail/house-detail.component';
+import { HouseEditComponent } from '../pages/houses/house-edit/house-edit.component'
+import { LoginComponent } from '../pages/login/login.component'
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
             redirectTo: 'dashboard',
             pathMatch: 'full'
           },
-        {
+
+          {
           path: 'dashboard',
           component: StarterContentComponent
         },
@@ -49,6 +51,10 @@ import { RouterModule } from '@angular/router';
             }
           ]},
       ]},
+      {
+        path: 'login',
+        component: LoginComponent
+      },
 
     ])
   ],
