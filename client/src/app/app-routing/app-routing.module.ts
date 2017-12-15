@@ -8,6 +8,7 @@ import { HouseEditComponent } from '../pages/houses/house-edit/house-edit.compon
 import { LoginComponent } from '../pages/login/login.component'
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { AuthGuard, AuthService } from '../services';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { RouterModule } from '@angular/router';
       {
         path: '',
         component: StarterComponent,
+        canActivate: [AuthGuard],
         children: [
           {
             path: '',
@@ -53,8 +55,10 @@ import { RouterModule } from '@angular/router';
       ]},
       {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+        canActivate: [AuthGuard],
       },
+      { path: '**', redirectTo: '/' }
 
     ])
   ],

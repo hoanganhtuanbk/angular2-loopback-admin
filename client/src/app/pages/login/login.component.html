@@ -1,39 +1,83 @@
-<div class="row">
-  <div class="col-md-4">
-    <form *ngIf="state == 'login'">
-      <h3>Login</h3>
-      <input type="text" class="form-control" #username placeholder="Username" />
-      <input type="password" class="form-control" #password placeholder="Password" />
-      <br />
-      <a class="btn btn-block btn-success" (click)="login(username, password)">Login</a>
-      <a class="btn btn-block btn-info" (click)="setState('reset')">Reset password</a>
-      <a class="btn btn-block btn-info" (click)="setState('signup')">Signup</a>
-    </form>
+<!--<div class="container">-->
+  <!--<div class="row">-->
+    <!--<div class="col-md-offset-4 col-md-4">-->
+      <!--<form *ngIf="state == 'login'" (submit)="login(username, password)">-->
+        <!--<h3>Login</h3>-->
+        <!--<input type="text" class="form-control" #username placeholder="Username" />-->
+        <!--<br />-->
 
-    <form *ngIf="state == 'reset'">
-      <h3>Reset Password</h3>
-      <input type="text" #email class="form-control" placeholder="Email" />
-      <br />
-      <a class="btn btn-block btn-success" (click)="resetPassword(email)">Reset password</a>
-      <a class="btn btn-block btn-success" (click)="setState('login')">Login</a>
-      <a class="btn btn-block btn-info" (click)="setState('signup')">Signup</a>
-    </form>
+        <!--<input type="password" class="form-control" #password placeholder="Password" />-->
+        <!--<br />-->
+        <!--<button class="btn btn-block btn-success" type="submit">Login</button>-->
+        <!--<button class="btn btn-block btn-info" (click)="setState('reset')">Reset password</button>-->
+        <!--<button class="btn btn-block btn-info" (click)="setState('signup')">Signup</button>-->
+      <!--</form>-->
 
-    <form *ngIf="state == 'signup'">
-      <h3>Login</h3>
-      <input type="text" class="form-control" #username placeholder="Username" />
-      <input type="text" class="form-control" #email placeholder="Email" />
-      <input type="password" class="form-control" #password placeholder="Password" />
-      <input type="confirmation" class="form-control" #confirmPassword placeholder="Confirm Password" />
-      <select class="form-control" #type>
-        <option value="free">Free</option>
-        <option value="paid">Paid</option>
-      </select>
-      <br />
-      <a class="btn btn-block btn-success"
-         (click)="signup(username, email, password, confirmPassword, type)">Signup</a>
-      <a class="btn btn-block btn-info" (click)="setState('reset')">Reset password</a>
-      <a class="btn btn-block btn-info" (click)="setState('login')">Login</a>
-    </form>
+      <!--<form *ngIf="state == 'reset'">-->
+        <!--<h3>Reset Password</h3>-->
+        <!--<input type="text" #email class="form-control" placeholder="Email" />-->
+        <!--<br />-->
+        <!--<a class="btn btn-block btn-success" (click)="resetPassword(email)">Reset password</a>-->
+        <!--<a class="btn btn-block btn-success" (click)="setState('login')">Login</a>-->
+        <!--<a class="btn btn-block btn-info" (click)="setState('signup')">Signup</a>-->
+      <!--</form>-->
+
+      <!--<form *ngIf="state == 'signup'">-->
+        <!--<h3>Register</h3>-->
+        <!--<input type="text" class="form-control" #username placeholder="Username" />-->
+        <!--<input type="text" class="form-control" #email placeholder="Email" />-->
+        <!--<input type="password" class="form-control" #password placeholder="Password" />-->
+        <!--<input type="confirmation" class="form-control" #confirmPassword placeholder="Confirm Password" />-->
+        <!--<br />-->
+        <!--<a class="btn btn-block btn-success"-->
+           <!--(click)="signup(username, email, password, confirmPassword)">Signup</a>-->
+        <!--<a class="btn btn-block btn-info" (click)="setState('reset')">Reset password</a>-->
+        <!--<a class="btn btn-block btn-info" (click)="setState('login')">Login</a>-->
+      <!--</form>-->
+    <!--</div>-->
+  <!--</div>-->
+
+<!--</div>-->
+<div class="login-page">
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="../../index2.html"><b>Admin</b>LTE</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+      <p class="login-box-msg">Sign in to start your session</p>
+
+      <form (submit)="login(username, password)">
+        <div class="form-group has-feedback">
+          <input type="text" class="form-control" #username placeholder="Username">
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" class="form-control" #password  placeholder="Password">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="checkbox icheck">
+              <label>
+                <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> Remember Me
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          </div>
+          <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+
+    </div>
+    <!-- /.login-box-body -->
   </div>
 </div>
+

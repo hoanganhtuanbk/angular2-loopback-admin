@@ -4,18 +4,20 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "House": 1,
+    "House": 2,
     "booking": 1,
     "rent": 1,
     "account": 3,
-    "AccessToken": 2
+    "AccessToken": 13
   },
   "models": {
     "User": {},
     "ACL": {},
     "RoleMapping": {},
     "Role": {},
-    "House": {},
+    "House": {
+      "1": "{\"name\":\"FunHouse\",\"address\":\"Liên Chiểu, Đà Nẵng\",\"phone\":\"(+84)1206145483\",\"social_link\":\"https://fb.com/anhtuanhnh\",\"description\":\"Nhà mới xây, rộng rãi thoáng mát, phù hợp cho người mới ra trường đi làm.\",\"owner_id\":\"string\",\"category\":\"Nhà cho thuê\",\"price\":100000,\"bed\":1,\"image\":\"string\",\"status\":\"string\",\"rating\":4,\"views\":100,\"reviews\":10,\"last_edit\":\"string\",\"latitude\":16.059237,\"longitude\":108.22332,\"happy_time\":\"6:00 - 22:00\",\"owner_name\":\"Tuan Hoang\",\"id\":1}"
+    },
     "booking": {},
     "rent": {},
     "account": {
@@ -23,7 +25,12 @@
       "2": "{\"realm\":\"user\",\"username\":\"user\",\"email\":\"user@user.com\",\"password\":\"$2a$10$.TJY3W6uSEQRSFHJXZPKGuEATYI5UsCJWvgoUQBWCplHw8f32XH8W\",\"id\":2}"
     },
     "AccessToken": {
-      "Xut9eRJhxHNbwzzLuH63nNkxA1ZlLOjLYxWaeoAVSwoxI6mdEn2hxWWnrXMmZpbN": "{\"id\":\"Xut9eRJhxHNbwzzLuH63nNkxA1ZlLOjLYxWaeoAVSwoxI6mdEn2hxWWnrXMmZpbN\",\"ttl\":1209600,\"created\":\"2017-12-13T18:22:33.172Z\",\"userId\":2}"
+      "Xut9eRJhxHNbwzzLuH63nNkxA1ZlLOjLYxWaeoAVSwoxI6mdEn2hxWWnrXMmZpbN": "{\"id\":\"Xut9eRJhxHNbwzzLuH63nNkxA1ZlLOjLYxWaeoAVSwoxI6mdEn2hxWWnrXMmZpbN\",\"ttl\":1209600,\"created\":\"2017-12-13T18:22:33.172Z\",\"userId\":2}",
+      "FbImgKcfJvBNEjtHBGcXYgFH6F27EYUAf4QBm9hzbg0U7ixMnDfiCs7TZrSPIRGb": "{\"id\":\"FbImgKcfJvBNEjtHBGcXYgFH6F27EYUAf4QBm9hzbg0U7ixMnDfiCs7TZrSPIRGb\",\"ttl\":1209600,\"created\":\"2017-12-13T18:55:51.638Z\",\"userId\":2}",
+      "oSwy0P3X8LEEjBr4FnnxZCjYu16876hqOvcyya7Mg52wOmRSBMPdixbNOnZb1BXI": "{\"id\":\"oSwy0P3X8LEEjBr4FnnxZCjYu16876hqOvcyya7Mg52wOmRSBMPdixbNOnZb1BXI\",\"ttl\":1209600,\"created\":\"2017-12-14T12:13:00.660Z\",\"userId\":2}",
+      "wBHKATBHPpb3cG23vcEXEQ8jMC59FMiG9eHBIJCw0RdKoiqxa8HFyjZjiJAOV2AO": "{\"id\":\"wBHKATBHPpb3cG23vcEXEQ8jMC59FMiG9eHBIJCw0RdKoiqxa8HFyjZjiJAOV2AO\",\"ttl\":1209600,\"created\":\"2017-12-14T12:24:58.871Z\",\"userId\":2}",
+      "YBabcodPmG2yjCJlVSV2nFBBViYyHM1T1pJp5NXjExYVVGLrWo6ji61kNxdQaqoe": "{\"id\":\"YBabcodPmG2yjCJlVSV2nFBBViYyHM1T1pJp5NXjExYVVGLrWo6ji61kNxdQaqoe\",\"ttl\":1209600,\"created\":\"2017-12-14T12:25:43.068Z\",\"userId\":2}",
+      "CQDgWVw1o5EfORmO4fAWChHxii6kWcPGosKDYUJkhkcFAtKLmKQaVQaqvhDolZNU": "{\"id\":\"CQDgWVw1o5EfORmO4fAWChHxii6kWcPGosKDYUJkhkcFAtKLmKQaVQaqvhDolZNU\",\"ttl\":1209600,\"created\":\"2017-12-14T14:58:32.751Z\",\"userId\":2}"
     }
   }
 }

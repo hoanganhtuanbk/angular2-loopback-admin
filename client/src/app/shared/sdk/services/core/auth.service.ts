@@ -55,7 +55,7 @@ export class LoopBackAuth {
    * rememberMe flag is set.
    **/
   public setUser(user: any) {
-    this.token.user = user;
+    this.token = user;
     this.save();
   }
   /**

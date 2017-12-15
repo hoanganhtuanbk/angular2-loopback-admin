@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SDKBrowserModule } from './shared/sdk/index';
 import { CommonModule } from '@angular/common';
+import { AuthGuard, AuthService } from './services';
 
 
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { HouseAddComponent } from './pages/houses/house-add/house-add.component'
 import { HouseDetailComponent } from './pages/houses/house-detail/house-detail.component';
 import { HouseEditComponent } from './pages/houses/house-edit/house-edit.component';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { LoginComponent } from './pages/login/login.component';
     HouseDetailComponent,
     HouseEditComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { LoginComponent } from './pages/login/login.component';
     SDKBrowserModule.forRoot()
   ],
   providers: [
-
+    AuthGuard,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
